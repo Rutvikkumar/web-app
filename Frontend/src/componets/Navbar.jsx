@@ -39,10 +39,10 @@ function Navbar() {
                 <a>Homepage</a>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a href="/login">Portfolio</a>
               </li>
               <li>
-                <a>About</a>
+                <a href="/signup">About</a>
               </li>
             </ul>
           </div>
