@@ -39,10 +39,10 @@ function Navbar() {
                 <a href="/">Homepage</a>
               </li>
               <li>
-                <a href="/login">Portfolio</a>
+                <a href="/login">login</a>
               </li>
               <li>
-                <a href="/signup">About</a>
+                <a href="/signup">signup</a>
               </li>
             </ul>
           </div>
@@ -68,16 +68,32 @@ function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
+
               <li>
-                <a className="justify-between" onClick={toggleProfilePopup}>
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+              <label className="block mb-2 text-sm font-bold text-white">
+                Name:
+              </label>
+              <p className="px-3 py-2  border rounded-lg  text-white">
+                John Doe
+              </p>
               </li>
               <li>
-                <a>Settings</a>
+              <label className="block mb-2 text-sm font-bold  text-white">
+                Email:
+              </label>
+              <p className="px-3 py-2  text-white border rounded-lg">
+                john.doe@example.com
+              </p>
               </li>
               <li>
+              <label className="block mb-2 text-sm font-bold  text-white">
+                Mobile Number:
+              </label>
+              <p className="px-3 py-2  text-white border rounded-lg">
+                123-456-7890
+              </p>
+              </li>
+              <li className="mt-2">
                 <a>Logout</a>
               </li>
             </ul>
@@ -89,14 +105,7 @@ function Navbar() {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="w-full max-w-sm p-6 bg-white rounded-lg">
             <h2 className="mb-4 text-xl font-bold">Profile Information</h2>
-            <div className="mb-4">
-              <label className="block mb-2 text-sm font-bold text-gray-700">
-                Name:
-              </label>
-              <p className="px-3 py-2 text-gray-700 border rounded-lg">
-                John Doe
-              </p>
-            </div>
+          
             <div className="mb-4">
               <label className="block mb-2 text-sm font-bold text-gray-700">
                 Email:
