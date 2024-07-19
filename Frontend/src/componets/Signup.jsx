@@ -1,11 +1,33 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-
   const password = watch("password");
+  const navigate = useNavigate();  // Create navigate instance
+
+  const onSubmit = async (data) => {
+    const userinfo = {
+      fullname: data.fullname,
+      email: data.email,
+      number: data.number,
+      password: data.password,
+      confirmPassword: data.confirmPassword
+    };
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/register", userinfo);
+      console.log(response.data);
+      toast.success('Successfully signed up!');
+      navigate('/');  // Redirect to login page
+    } catch (error) {
+      console.log(error);
+      toast.error('Signup failed! Please try again.');
+    }
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -16,10 +38,10 @@ const Signup = () => {
             <label className="block text-sm">Name</label>
             <input
               type="text"
-              {...register('name', { required: true })}
+              {...register('fullname', { required: true })}
               className="w-full px-4 py-2 mt-2 border rounded-md focus:ring focus:ring-opacity-75 focus:ring-blue-400"
             />
-            {errors.name && <p className="text-red-500 text-xs">Name is required</p>}
+            {errors.fullname && <p className="text-red-500 text-xs">Name is required</p>}
           </div>
           <div>
             <label className="block text-sm">Email</label>
@@ -66,6 +88,9 @@ const Signup = () => {
             </button>
           </div>
         </form>
+        <p className="text-sm text-center mt-4">
+          If you are already registered, then <a href="/login" className="text-blue-500 underline">login here</a>
+        </p>
       </div>
     </div>
   );

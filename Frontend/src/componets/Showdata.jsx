@@ -1,0 +1,57 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+function ShowData() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/data");
+        setData(response.data);
+      } catch (error) {
+        setError("Failed to fetch data. Please try again.");
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+      <h2 className="mb-4 text-xl text-black font-bold">Data Table</h2>
+      {error && <p className="mb-4 text-red-500">{error}</p>}
+      <div className="w-full max-w-4xl p-6 bg-white rounded-lg shadow-md overflow-x-auto">
+        <table className="w-full table-auto">
+          <thead>
+            <tr className="bg-gray-200">
+              <th className="px-4 py-2 text-blue-500">Address</th>
+              <th className="px-4 py-2 text-blue-500">File Number</th>
+              <th className="px-4 py-2 text-blue-500">Vehicle Number</th>
+              <th className="px-4 py-2 text-blue-500">Vehicle Type</th>
+              <th className="px-4 py-2 text-blue-500">Mobile Number</th>
+              <th className="px-4 py-2 text-blue-500">Car Problem</th>
+              <th className="px-4 py-2 text-blue-500">Driver Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <tr key={item._id} className="bg-white border-b">
+                <td className="px-4 py-2 text-black">{item.address}</td>
+                <td className="px-4 py-2 text-black">{item.fileNumber}</td>
+                <td className="px-4 py-2 text-black">{item.vehicleNumber}</td>
+                <td className="px-4 py-2 text-black">{item.vehicleType}</td>
+                <td className="px-4 py-2 text-black">{item.mobileNumber}</td>
+                <td className="px-4 py-2 text-black">{item.carProblem}</td>
+                <td className="px-4 py-2 text-black">{item.driverName}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+export default ShowData;
