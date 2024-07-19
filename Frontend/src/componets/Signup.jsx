@@ -89,7 +89,7 @@ const Signup = () => {
           </div>
         </form>
         <p className="text-sm text-center mt-4">
-          If you are already registered, then <a href="/login" className="text-blue-500 underline">login here</a>
+          If you are already registered, then <a href="/" className="text-blue-500 underline">login here</a>
         </p>
       </div>
     </div>
