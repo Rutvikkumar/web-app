@@ -40,7 +40,7 @@ function Form() {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:5000/api/form', formData);
+      const response = await axios.post('https://web-app-uk9h.onrender.com/api/form', formData);
       console.log('Success:', response.data);
       toast.success('Successfully created!');
       setFormData(initialFormData); // Clear the form fields

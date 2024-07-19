@@ -19,7 +19,7 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/register", userinfo);
+      const response = await axios.post("https://web-app-uk9h.onrender.com/api/register", userinfo);
       console.log(response.data);
       toast.success('Successfully signed up!');
       navigate('/');  // Redirect to login page

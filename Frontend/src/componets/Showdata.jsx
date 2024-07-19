@@ -8,7 +8,7 @@ function ShowData() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/data");
+        const response = await axios.get("https://web-app-uk9h.onrender.com/api/data");
         setData(response.data);
       } catch (error) {
         setError("Failed to fetch data. Please try again.");
