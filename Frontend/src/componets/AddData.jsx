@@ -66,7 +66,7 @@ function Form() {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
@@ -78,7 +78,7 @@ function Form() {
               name="fileNumber"
               value={formData.fileNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
@@ -90,7 +90,7 @@ function Form() {
               name="vehicleNumber"
               value={formData.vehicleNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
@@ -102,7 +102,7 @@ function Form() {
               name="vehicleType"
               value={formData.vehicleType}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
@@ -114,7 +114,7 @@ function Form() {
               name="mobileNumber"
               value={formData.mobileNumber}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="mb-4">
@@ -125,7 +125,7 @@ function Form() {
               name="carProblem"
               value={formData.carProblem}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select a problem</option>
               <option value="jumpStart">Jump Start</option>
@@ -141,7 +141,7 @@ function Form() {
               name="driverName"
               value={formData.driverName}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select a driver</option>
               <option value="jayesh bhai">Jayesh Bhai</option>

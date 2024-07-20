@@ -10,14 +10,14 @@ function Home() {
           <a href="/add">
             {" "}
             <button className="px-10 py-5 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
-              Show Form
+              ADD RECORD
             </button>
           </a>
 
           <a href="/show">
             {" "}
             <button className="px-10 py-5 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
-              All Data
+              ALL DATA
             </button>
           </a>
         </div>
