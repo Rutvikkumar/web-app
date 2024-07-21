@@ -58,10 +58,7 @@ function Navbar() {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
               </div>
             </div>
             <ul
@@ -70,26 +67,26 @@ function Navbar() {
             >
 
               <li>
-              <label className="block mb-2 text-sm font-bold text-white">
+              <label className="block mb-2 text-sm font-bold">
                 Name:
               </label>
-              <p className="px-3 py-2  border rounded-lg  text-white">
+              <p className="px-3 py-2  border rounded-lg  ">
                 John Doe
               </p>
               </li>
               <li>
-              <label className="block mb-2 text-sm font-bold  text-white">
+              <label className="block mb-2 text-sm font-bold">
                 Email:
               </label>
-              <p className="px-3 py-2  text-white border rounded-lg">
+              <p className="px-3 py-2 border rounded-lg">
                 john.doe@example.com
               </p>
               </li>
               <li>
-              <label className="block mb-2 text-sm font-bold  text-white">
+              <label className="block mb-2 text-sm font-bold">
                 Mobile Number:
               </label>
-              <p className="px-3 py-2  text-white border rounded-lg">
+              <p className="px-3 py-2 border rounded-lg">
                 123-456-7890
               </p>
               </li>
@@ -101,36 +98,6 @@ function Navbar() {
         </div>
       </div>
 
-      {showProfilePopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="w-full max-w-sm p-6 bg-white rounded-lg">
-            <h2 className="mb-4 text-xl font-bold">Profile Information</h2>
-          
-            <div className="mb-4">
-              <label className="block mb-2 text-sm font-bold text-gray-700">
-                Email:
-              </label>
-              <p className="px-3 py-2 text-gray-700 border rounded-lg">
-                john.doe@example.com
-              </p>
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2 text-sm font-bold text-gray-700">
-                Mobile Number:
-              </label>
-              <p className="px-3 py-2 text-gray-700 border rounded-lg">
-                123-456-7890
-              </p>
-            </div>
-            <button
-              onClick={toggleProfilePopup}
-              className="w-full px-4 py-2 mt-4 font-semibold text-white bg-red-500 rounded-lg hover:bg-red-700"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }
